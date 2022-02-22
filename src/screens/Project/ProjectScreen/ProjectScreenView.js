@@ -1,25 +1,14 @@
 import React from 'react';
-import {Text, View} from 'react-native';
+import {Text} from 'react-native';
 import useSetHeaderTitle from '#hooks/useSetHeaderTitle';
+import ApiStatus from '#/components/ApiStatus';
 
 export default function ProjectScreenView({fetchStatus}) {
   useSetHeaderTitle(fetchStatus.state === 'success' ? fetchStatus.data.data.first_name : null);
 
-  if (fetchStatus.state === 'loading') {
-    return (
-      <View>
-        <Text>Cargando...</Text>
-      </View>
-    );
-  }
-
-  if (fetchStatus.state === 'error') {
-    return (
-      <View>
-        <Text>Error!</Text>
-      </View>
-    );
-  }
-
-  return <Text>Hola, soy el proyecto {fetchStatus.data.data.email}</Text>;
+  return (
+    <ApiStatus fetchStatus={fetchStatus}>
+      {(data) => <Text>Hola, soy el proyecto {data.data.email}</Text>}
+    </ApiStatus>
+  );
 }

@@ -19,14 +19,14 @@ function ProjectsStackScreen() {
         name={PROJECTS}
         component={ProjectsScreen}
         options={{
-          headerTitle: 'Projects',
+          headerTitle: 'Projects'
         }}
       />
       <ProjectsStack.Screen
         name={PROJECT}
         component={ProjectScreen}
         options={{
-          headerTitle: 'Project',
+          headerTitle: 'Project'
         }}
       />
     </ProjectsStack.Navigator>
@@ -56,19 +56,18 @@ export default function AppNavigationStack() {
       <Tab.Navigator
         screenOptions={{
           tabBarStyle: {
-            backgroundColor: '#264653',
+            backgroundColor: '#264653'
           },
-          tabBarActiveTintColor: '#FFFFFF',
-        }}>
+          tabBarActiveTintColor: '#FFFFFF'
+        }}
+      >
         <Tab.Screen
           name="ProjectsTab"
           component={ProjectsStackScreen}
           options={{
             headerShown: false,
             title: 'Usuarios',
-            tabBarIcon: ({color, size}) => (
-              <Icon name="folder-open" size={size} color={color} />
-            ),
+            tabBarIcon: ({color, size}) => <Icon name="folder-open" size={size} color={color} />
           }}
         />
         <Tab.Screen
@@ -77,9 +76,7 @@ export default function AppNavigationStack() {
           options={{
             headerShown: false,
             title: 'Contacto',
-            tabBarIcon: ({color, size}) => (
-              <Icon name="send" size={size} color={color} />
-            ),
+            tabBarIcon: ({color, size}) => <Icon name="send" size={size} color={color} />
           }}
         />
         <Tab.Screen
@@ -87,9 +84,7 @@ export default function AppNavigationStack() {
           component={SettingsScreen}
           options={{
             title: 'Ajustes',
-            tabBarIcon: ({color, size}) => (
-              <Icon name="cog" size={size} color={color} />
-            ),
+            tabBarIcon: ({color, size}) => <Icon name="cog" size={size} color={color} />
           }}
         />
       </Tab.Navigator>
