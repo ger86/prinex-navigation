@@ -3,12 +3,15 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Icon from 'react-native-ionicons';
+import CreateExpenseForm from './screens/Expenses/CreateExpenseForm';
+import SelectCategory from './screens/Expenses/CreateExpenseForm/SelectCategory';
+import ExpenseCreated from './screens/Expenses/ExpenseCreated';
 import ProjectsScreen from './screens/Project/ProjectsScreen';
 import ProjectScreen from './screens/Project/ProjectScreen';
 import ContactScreen from './screens/Contact/ContactScreen';
 import SettingsScreen from './screens/SettingsScreen';
 import ThanksScreen from './screens/Contact/ThanksScreen';
-import {PROJECT, PROJECTS} from './consts/screens';
+import {EXPENSE_CREATED, PROJECT, PROJECTS} from './consts/screens';
 
 const ProjectsStack = createNativeStackNavigator();
 
@@ -48,6 +51,22 @@ function ContactStackScreen() {
   );
 }
 
+const ExpensesStack = createNativeStackNavigator();
+
+function ExpensesStackScreen() {
+  return (
+    <ExpensesStack.Navigator>
+      <ExpensesStack.Group>
+        <ExpensesStack.Screen name="CreateExpenseForm" component={CreateExpenseForm} />
+        <ExpensesStack.Screen name="ExpensesSelectCategory" component={SelectCategory} />
+      </ExpensesStack.Group>
+      <ExpensesStack.Group screenOptions={{presentation: 'modal'}}>
+        <ExpensesStack.Screen name={EXPENSE_CREATED} component={ExpenseCreated} />
+      </ExpensesStack.Group>
+    </ExpensesStack.Navigator>
+  );
+}
+
 const Tab = createBottomTabNavigator();
 
 export default function AppNavigationStack() {
@@ -84,6 +103,15 @@ export default function AppNavigationStack() {
           component={SettingsScreen}
           options={{
             title: 'Ajustes',
+            tabBarIcon: ({color, size}) => <Icon name="cog" size={size} color={color} />
+          }}
+        />
+        <Tab.Screen
+          name="ExpensesTab"
+          component={ExpensesStackScreen}
+          options={{
+            headerShown: false,
+            title: 'Gastos',
             tabBarIcon: ({color, size}) => <Icon name="cog" size={size} color={color} />
           }}
         />

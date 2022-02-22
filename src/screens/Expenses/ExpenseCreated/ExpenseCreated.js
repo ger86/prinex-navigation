@@ -3,7 +3,8 @@ import {Button, Text, View} from 'react-native';
 
 const style = {flex: 1, justifyContent: 'center', alignItems: 'center'};
 
-export default function ThanksScreen({navigation}) {
+export default function ExpenseCreated({navigation, route}) {
+  const values = route.params;
   useLayoutEffect(
     function () {
       navigation.setOptions({
@@ -14,7 +15,10 @@ export default function ThanksScreen({navigation}) {
   );
   return (
     <View style={style}>
-      <Text>Gracias!!</Text>
+      <Text>Gasto añadido!!</Text>
+      <Text>Title: {values.title}</Text>
+      <Text>Amount: {values.amount}</Text>
+      <Text>Category: {values.category}</Text>
     </View>
   );
 }
