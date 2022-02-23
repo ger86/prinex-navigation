@@ -1,6 +1,11 @@
 import React from 'react';
 import AppNavigationStack from './AppNavigationStack';
+import {ModeContextProvider} from './contexts/ModeContext';
 
 export default function App() {
-  return <AppNavigationStack />;
+  return (
+    <ModeContextProvider>
+      <AppNavigationStack />
+    </ModeContextProvider>
+  );
 }
