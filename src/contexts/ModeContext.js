@@ -8,7 +8,7 @@ export function useModeContext() {
 
 export function ModeContextProvider({children}) {
   const [_, setCount] = useState(0);
-  const [mode, setMode] = useState('dark');
+  const [mode, setMode] = useState('light');
 
   const toggleMode = useCallback(function () {
     setMode((m) => (m === 'light' ? 'dark' : 'light'));

@@ -1,11 +1,8 @@
-import {useNavigation} from '@react-navigation/native';
 import React from 'react';
-import {Text, TouchableOpacity, View} from 'react-native';
-import {PROJECT} from '#consts/screens';
-
-const titleStyle = {
-  fontSize: 32
-};
+import {useNavigation} from '@react-navigation/native';
+import {TouchableOpacity, View} from 'react-native';
+import Text from '#/components/ui/Text';
+import {PROJECT} from '#/consts/screens';
 
 const containerStyle = {
   backgroundColor: '#c2fff9',
@@ -23,7 +20,7 @@ export default function ProjectItem({project}) {
           navigation.navigate(PROJECT, {projectId: project.id});
         }}
       >
-        <Text style={titleStyle}>{project.email}</Text>
+        <Text>{project.email}</Text>
       </TouchableOpacity>
     </View>
   );

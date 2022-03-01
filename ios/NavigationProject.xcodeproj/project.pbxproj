@@ -14,6 +14,7 @@
 		4A6BB7615C113264CA7AFBF2 /* libPods-NavigationProject-NavigationProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = CBBD8AC1EF3AE22B4F685676 /* libPods-NavigationProject-NavigationProjectTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		8947C7DB96E843358A51E9E2 /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C34BAD18CBD04E0B81907811 /* Ionicons.ttf */; };
+		B565CC7339904CD7B69162F5 /* OpenSans.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 97F18B344E804BA88B0C4404 /* OpenSans.ttf */; };
 		C26F0D326C6D6FFD1BB863AA /* libPods-NavigationProject.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 8A7D6A74237FDFA7C0E8FD4F /* libPods-NavigationProject.a */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +44,8 @@
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = NavigationProject/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8A7D6A74237FDFA7C0E8FD4F /* libPods-NavigationProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NavigationProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		961FAF1A4E56C9B7192BBD99 /* Pods-NavigationProject.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NavigationProject.release.xcconfig"; path = "Target Support Files/Pods-NavigationProject/Pods-NavigationProject.release.xcconfig"; sourceTree = "<group>"; };
-		C34BAD18CBD04E0B81907811 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = undefined; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-ionicons/fonts/Ionicons.ttf"; sourceTree = "<group>"; };
+		97F18B344E804BA88B0C4404 /* OpenSans.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = OpenSans.ttf; path = ../assets/fonts/OpenSans.ttf; sourceTree = "<group>"; };
+		C34BAD18CBD04E0B81907811 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/react-native-ionicons/fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		CBBD8AC1EF3AE22B4F685676 /* libPods-NavigationProject-NavigationProjectTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-NavigationProject-NavigationProjectTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -144,9 +146,9 @@
 			isa = PBXGroup;
 			children = (
 				C34BAD18CBD04E0B81907811 /* Ionicons.ttf */,
+				97F18B344E804BA88B0C4404 /* OpenSans.ttf */,
 			);
 			name = Resources;
-			path = "";
 			sourceTree = "<group>";
 		};
 		D0E1E1B097A8919ECECB2BD2 /* Pods */ = {
@@ -157,7 +159,6 @@
 				754BF6C8FBC594FC6CAC2A8C /* Pods-NavigationProject-NavigationProjectTests.debug.xcconfig */,
 				0845B9B1F0A57FF7AC61CA0A /* Pods-NavigationProject-NavigationProjectTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -258,6 +259,7 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				8947C7DB96E843358A51E9E2 /* Ionicons.ttf in Resources */,
+				B565CC7339904CD7B69162F5 /* OpenSans.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

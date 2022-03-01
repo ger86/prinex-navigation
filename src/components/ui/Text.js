@@ -1,15 +1,21 @@
+import {useModeContext} from '#/contexts/ModeContext';
 import React from 'react';
 import {StyleSheet, Text as RNText} from 'react-native';
 
 const styles = StyleSheet.create({
   light: {
-    color: '#333'
+    color: 'black'
   },
   dark: {
-    color: '#fff'
+    color: 'white'
+  },
+  text: {
+    fontSize: 14,
+    fontFamily: 'OpenSans'
   }
 });
 
-export default function Text({mode, ...rest}) {
-  return <RNText style={mode === 'light' ? styles.light : styles.dark} {...rest} />;
+export default function Text({...rest}) {
+  const {mode} = useModeContext();
+  return <RNText style={[styles.text, mode === 'light' ? styles.light : styles.dark]} {...rest} />;
 }

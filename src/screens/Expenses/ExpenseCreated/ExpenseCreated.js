@@ -5,6 +5,7 @@ const style = {flex: 1, justifyContent: 'center', alignItems: 'center'};
 
 export default function ExpenseCreated({navigation, route}) {
   const values = route.params;
+
   useLayoutEffect(
     function () {
       navigation.setOptions({

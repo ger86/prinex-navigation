@@ -4,6 +4,12 @@
 <dict>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
+    <key>NSPhotoLibraryUsageDescription</key>
+    <string>Esta aplicación necesita tener acceso a tu carrete para poder seleccionar fotos.</string>
+    <key>NSCameraUsageDescription</key>
+    <string>Esta aplicación necesita tener acceso a tu cámara para permitirte tomar fotos con la cámara.</string>
+    <key>NSMicrophoneUsageDescription</key>
+    <string>Esta aplicación necesita tener acceso a tu micrófono para permitirte grabar vídeos con la cámara.</string>
 	<key>CFBundleDisplayName</key>
 	<string>NavigationProject</string>
 	<key>CFBundleExecutable</key>
@@ -54,6 +60,7 @@
 	<key>UIAppFonts</key>
 	<array>
 		<string>Ionicons.ttf</string>
+		<string>OpenSans.ttf</string>
 	</array>
 </dict>
 </plist>
